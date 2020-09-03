@@ -1,0 +1,112 @@
+<!doctype html>
+
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Home</title>
+    <meta name="description" content="Home">
+    <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <script src="https://kit.fontawesome.com/72e0b573fc.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    
+    <header>
+        <center><img src="dbwdlogo.png" class="img-fluid"></center>
+    </header>
+    
+        <nav>
+            <span style="font-size:30px;cursor:pointer" onclick="openNav()"><i class="fas fa-bars"></i></span>
+            <ul id="mySidenav" class="sidenav">
+                <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+                <li><a class="nav-link" href="#home">Home</a></li>
+                <li><a class="nav-link" href="#projects">Projects</a></li>
+                <li><a class="nav-link" href="#blog">Blog</a></li>
+                <li><a class="nav-link" href="#bio">About the Developer</a></li>
+                <li><a class="nav-link" href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+        
+    <div class="home" id="main">
+        <h1>This is the content.</h1>
+            <section id="home">
+                <h2>Home</h2>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla rhoncus ultricies leo hendrerit fringilla. Donec vestibulum ut arcu eget porttitor. Sed eget dictum diam. Pellentesque et libero vitae eros molestie accumsan. Quisque ante sem, tristique vitae justo eget, rhoncus dictum ipsum. Suspendisse gravida volutpat justo, non auctor quam feugiat id. Aenean dapibus eget sem sit amet rhoncus. Nulla facilisi. Aliquam erat volutpat. Suspendisse ac ex diam.</p>
+            </section>
+            <section id="projects">
+                <h2>Projects</h2>
+                <p>Mauris tincidunt dui ac diam bibendum, in consectetur nulla porta. Integer eget accumsan ante. Donec ante augue, pretium non porta pharetra, imperdiet eu libero. Phasellus dignissim elementum ligula, eget vehicula nunc. Etiam maximus lorem eu quam viverra volutpat. Donec viverra lorem in quam dapibus consequat. Pellentesque viverra libero ligula, vel rhoncus lectus fermentum at. Duis mattis, sapien sit amet pulvinar ultricies, enim ante lobortis odio, non molestie mi erat at ante. Nullam vulputate lectus nec nunc auctor, eu vestibulum quam suscipit. In ut condimentum purus, varius vestibulum dui. Maecenas in feugiat tortor, sit amet iaculis magna. Nam enim nisi, feugiat sit amet vestibulum vel, vulputate quis nisl. Pellentesque vulputate lobortis augue, vitae sollicitudin augue maximus et.</p>
+            </section>
+            <section id="blog">
+                <h2>Blog</h2>
+                <p>Proin lobortis semper nulla, non vehicula massa maximus vitae. Curabitur molestie, dolor ac venenatis efficitur, diam neque pretium tellus, in laoreet lorem nisi vel arcu. Aenean maximus egestas erat a viverra. Sed dapibus, neque ullamcorper laoreet dignissim, neque massa molestie erat, eu lacinia orci nisl et nisl. Nam ipsum neque, dignissim a mi ac, pretium tempus enim. In egestas mauris nec libero malesuada hendrerit. Duis tincidunt vestibulum tincidunt. Donec feugiat eros lectus, rutrum pretium turpis gravida maximus. Cras nec fermentum tortor. Integer a nisi gravida, sagittis sem et, malesuada ipsum. Aliquam erat volutpat. Integer fringilla lacus in sem cursus mattis. Donec bibendum felis laoreet, gravida neque nec, egestas libero.</p>
+            </section>
+            <section id="bio">
+                <h2>About the Developer</h2>
+                <p>Fusce laoreet nisi nec semper euismod. Nulla dignissim, neque placerat scelerisque varius, sem erat commodo lorem, nec rutrum sapien neque sit amet tortor. Aliquam eu lectus lobortis, condimentum nisi eu, posuere magna. Etiam felis nisi, dictum sed dolor eu, consequat auctor nibh. Morbi nibh ipsum, accumsan ut tortor nec, condimentum imperdiet tortor. Aliquam tellus lacus, venenatis sit amet consectetur ut, auctor sed leo. Etiam in elit ultricies, consequat risus at, pulvinar massa. Quisque tempor neque vitae lacus pellentesque maximus. Aliquam eu urna purus. Ut ut ligula porttitor justo convallis lacinia vel ac ligula. Praesent dapibus pellentesque nunc, eget scelerisque sem finibus at. Sed sed felis pellentesque orci scelerisque ultrices vitae egestas massa. Donec iaculis efficitur tristique. Suspendisse interdum ac tortor vitae volutpat. Sed sit amet risus quis nisi tempus gravida eu id odio. Cras mattis neque fermentum tortor interdum pellentesque.</p>
+            </section>
+            <section id="contact">
+                <h2>Contact</h2>
+                <p>Nulla pharetra sollicitudin elit, at consequat felis hendrerit a. Donec venenatis, mi id vehicula ornare, nunc est maximus magna, nec commodo mi quam et ante. Nam porta dui vel nulla dignissim, at commodo enim rutrum. Donec eu quam nec est pharetra lacinia aliquam semper tellus. Nulla quis elementum odio. Sed blandit sapien eros, ut venenatis nisl ultricies vitae. Suspendisse ut velit at ante lobortis convallis sed non urna. Ut dui augue, feugiat vitae ex vel, sagittis lacinia est. Sed dictum urna vel eleifend faucibus. Proin ultrices placerat nibh, sed pulvinar nisl tincidunt non.</p>
+            </section>
+
+        </div>
+    
+<script>
+function openNav() {
+  document.getElementById("mySidenav").style.width = "250px";
+}
+
+function closeNav() {
+  document.getElementById("mySidenav").style.width = "0";
+    return false;
+}
+
+
+let mainNavLinks = document.querySelectorAll("nav ul li a");
+let mainSections = document.querySelectorAll("main section");
+
+let lastId;
+let cur = [];
+
+window.addEventListener("scroll", event => {
+   let fromTop = window.scrollY;
+
+  mainNavLinks.forEach(link => {
+    let section = document.querySelector(link.hash);
+
+    if (
+  section.offsetTop <= fromTop &&
+  section.offsetTop + section.offsetHeight > fromTop
+) {
+  link.classList.add("current");
+} else {
+  link.classList.remove("current");
+}
+  });
+}); 
+    
+    
+window.onscroll = function() {myFunction()};
+
+var navbar = document.getElementById("navbar");
+var sticky = navbar.offsetTop;
+
+function myFunction() {
+  if (window.pageYOffset >= sticky) {
+    navbar.classList.add("sticky")
+  } else {
+    navbar.classList.remove("sticky");
+  }
+}
+</script>
+
+    
+<script src="js/bootstrap.min.js"></script>
+<script src="js/bootstrap.bundle.min.js"></script>
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+</body>
+</html>
